@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class ADO3_Ex3 {
 	public static void main(String[] args) {
 		
