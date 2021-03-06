@@ -29,8 +29,6 @@ public class ADO3_Ex2 {
 		}
 
 		
-		
-
 	}
 
 }
