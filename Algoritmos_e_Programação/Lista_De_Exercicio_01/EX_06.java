@@ -1,7 +1,6 @@
 import java.util.Scanner;
-import java.math.*;
 
-public class EX_6 {
+public class EX_06 {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);

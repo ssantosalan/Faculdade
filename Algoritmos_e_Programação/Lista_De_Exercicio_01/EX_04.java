@@ -1,23 +1,20 @@
-
-// Fazer um algoritmo que leia dois números e imprima na tela o produto (multiplicação) dos dois números.
-
 import java.util.Scanner;
 
-public class EX_1 {
+public class EX_04 {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		int N1, N2, produto;
+		int N1, N2;
 
 		System.out.print("Digite o primeiro número: ");
 		N1 = entrada.nextInt();
+		N1 = N1 + 1;
 
 		System.out.print("Digite o segundo número: ");
 		N2 = entrada.nextInt();
+		N2 = N2 + 1;
 
-		produto = (N1 * N2);
-
-		System.out.print("O produto destes dois números é igual a: " + produto);
+		System.out.print("Os números consecutivos desses números são respectivamente: " + N1 + " e " + N2);
 
 		entrada.close();
 

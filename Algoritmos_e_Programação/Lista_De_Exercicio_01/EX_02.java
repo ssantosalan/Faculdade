@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EX_2 {
+public class EX_02 {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		int N1, N2;
