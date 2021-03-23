@@ -60,7 +60,8 @@ public class EX_18 {
 		if (A >= (B + C)) {
 			System.out.println("NÃO FORMA TRIÂNGULO");
 		
-		} else if ((A * A) == (B * B) + (C * C)) 
+		} else { 
+		if	((A * A) == (B * B) + (C * C)) 
 			System.out.println("TRIÂNGULO RETÂNGULO");
 		
 		if ((A * A > B * B + C * C) && (A != B + C))
@@ -74,7 +75,7 @@ public class EX_18 {
 		
 		if ((A == B && B != C) || (B == C && C != A) || (A == C && C != B)) 
 			System.out.println("TRIÂNGULO ISÓSCELES");
-		
+		}
 
 		entrada.close();
 
