@@ -6,6 +6,7 @@ public class EX_04 {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Informe um mês no ano de 2021. Ex: Janeiro - 1. Fevereiro - 2. Março - 3...");
+		System.out.print("Número do mês: ");
 		int mes = sc.nextInt();
 
 		switch (mes) {

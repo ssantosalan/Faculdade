@@ -16,10 +16,13 @@ public class EX_07 {
 			valorT = valorT + 50;
 		} else if (idade >= 40 && idade <= 60) {
 			valorT = valorT + 95;
-		} else {
+		} else if ( idade > 60) {
 			valorT = valorT + 130;
-		}
-
+		} 
+		/* Notei uma lacuna nas idades acima de 30 e abaixo de 40 no enunciado. 
+		   Resolvi deixar essa lacuna sem nenhuma adicional, seguindo a lógica.
+		*/
+		
 		System.out.print("O valor total a ser pago pelo plano de saúde será de: R$" + valorT);
 
 		sc.close();
