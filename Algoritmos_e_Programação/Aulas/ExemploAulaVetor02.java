@@ -30,12 +30,12 @@ public class ExemploAulaVetor02 {
 		}
 
 		for (int i = 0; i < n; i++) {
-			System.out.println("vetor[" + i + "]:" + vetor[i]);
+			System.out.print("vetor[" + i + "]:" + vetor[i]);
 			if (vetor[i] == menor) {
-				System.out.print("<-- menor");
+				System.out.print(" <-- menor");
 
 			} else if (vetor[i] == maior) {
-				System.out.print("<-- maior");
+				System.out.print(" <-- maior");
 			}
 			System.out.println("\n");
 		}
