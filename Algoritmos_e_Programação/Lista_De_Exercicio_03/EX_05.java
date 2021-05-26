@@ -5,7 +5,7 @@ public class EX_05 {
 	static double baskaraMaiorRaiz(double a, double b, double c) {
 		double baskaraMaiorRaiz = 0;
 
-		// ax2 + bx + c]
+		// ax2 + bx + c
 		// b² - 4 . a . b
 
 		double delta = (b * b) - 4 * a * c;
