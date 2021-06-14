@@ -22,7 +22,7 @@ public class EX_25 {
 			}
 			
 		}
-		
+		//to demotoca
 		for (int[] vetor :  matriz) {
 			
 			for (int item : vetor) {
