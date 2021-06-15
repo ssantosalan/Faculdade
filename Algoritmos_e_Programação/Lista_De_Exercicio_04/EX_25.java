@@ -13,16 +13,17 @@ public class EX_25 {
 		
 		int matriz[][] = new int [n][m];
 		
+
 		for (int i = 0; i < matriz.length; i++) {
 			
-			for (int j = 0; j < matriz.length; j++) {
+			for (int j = 0; j < m; j++) {
 				
 				matriz[i][j] = i;
 				
 			}
 			
 		}
-		//to demotoca
+
 		for (int[] vetor :  matriz) {
 			
 			for (int item : vetor) {
