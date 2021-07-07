@@ -11,7 +11,8 @@ public class EX_42 {
 		System.out.println("Colunas: ");
 		int m = entrada.nextInt();
 
-		int matriz[][] = new int[n][m];
+		int matrizA[][] = new int[n][m];
+		int matrizB[][] = new int[n][m];
 
 		entrada.close();
 
