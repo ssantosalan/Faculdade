@@ -12,7 +12,9 @@ public class EX_41 {
 		int m = entrada.nextInt();
 
 		int matriz[][] = new int[n][m];
-
+		
+		int media; 
+		
 		entrada.close();
 
 	}
