@@ -14,6 +14,9 @@ public class EX_42 {
 		int matrizA[][] = new int[n][m];
 		int matrizB[][] = new int[n][m];
 
+		int media; 
+		int soma;
+		
 		entrada.close();
 
 	}

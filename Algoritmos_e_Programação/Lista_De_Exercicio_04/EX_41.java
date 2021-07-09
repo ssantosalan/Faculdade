@@ -14,7 +14,7 @@ public class EX_41 {
 		int matriz[][] = new int[n][m];
 		
 		int media; 
-		
+		int soma;
 		entrada.close();
 
 	}
