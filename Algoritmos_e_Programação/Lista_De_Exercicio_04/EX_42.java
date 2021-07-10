@@ -16,6 +16,7 @@ public class EX_42 {
 
 		int media; 
 		int soma;
+		int menor;
 		
 		entrada.close();
 
