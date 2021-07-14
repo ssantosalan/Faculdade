@@ -20,6 +20,7 @@ public class EX_42 {
 		int maior;
 		int par;
 		int impar;
+		int resultado;
 		
 		entrada.close();
 
