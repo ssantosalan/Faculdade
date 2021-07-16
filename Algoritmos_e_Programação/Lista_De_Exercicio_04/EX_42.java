@@ -22,6 +22,7 @@ public class EX_42 {
 		int impar;
 		int resultado;
 		int zero;
+		int media;
 		
 		entrada.close();
 
