@@ -21,6 +21,7 @@ public class EX_42 {
 		int par;
 		int impar;
 		int resultado;
+		int zero;
 		
 		entrada.close();
 
