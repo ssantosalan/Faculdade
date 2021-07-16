@@ -15,6 +15,7 @@ public class EX_42 {
 		int matrizB[][] = new int[n][m];
 
 		int media; 
+		int maiorMedia;
 		int soma;
 		int menor;
 		int maior;
@@ -22,7 +23,7 @@ public class EX_42 {
 		int impar;
 		int resultado;
 		int zero;
-		int media;
+		
 		
 		entrada.close();
 
