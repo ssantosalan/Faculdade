@@ -15,7 +15,7 @@ public class EX_42 {
 		int matrizB[][] = new int[n][m];
 		int matrizC[][] = new int[n][m];
 		int matrizD[][] = new int[n][m];
-		
+		int matrizE[][] = new int[n][m];
 		int media; 
 		int maiorMedia;
 		int soma;
