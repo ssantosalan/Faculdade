@@ -4,7 +4,7 @@ public class EX_42 {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-
+		int a = 0;
 		System.out.println("Linhas: ");
 		int n = entrada.nextInt();
 
