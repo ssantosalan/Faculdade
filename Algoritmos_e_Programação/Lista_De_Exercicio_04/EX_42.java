@@ -22,6 +22,7 @@ public class EX_42 {
 		int soma;
 		int menor;
 		int maior;
+		int igual;
 		int par;
 		int impar;
 		int resultado;
