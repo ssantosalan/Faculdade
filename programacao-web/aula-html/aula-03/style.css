@@ -46,6 +46,11 @@ header{
     position: relative;
 }
 
+.busca {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .busca, .menu-departamentos {
     background-color: #DCDCDC;
     font-weight: bold;
@@ -91,16 +96,18 @@ header{
     margin: 10px 0;
     padding: 10px;
     width: 445px;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 1px #999;
 }
 
 .novidades {
     background-color: #F5DCDC;
-    float: left; 
+    float: linear-gradient(#F5DCDC, #BEBEF4); 
 }
 
 .mais-vendidos {
     background-color: #DCDCF5;
-    float: right;
+    float:  linear-gradient(#DCDCF5, #F4BEBE);
 }
 
 .painel li {
@@ -108,7 +115,7 @@ header{
     vertical-align: top;
     width: 140px;
     margin: 2px;
-    padding-bottom: 10px;;
+    padding-bottom: 10px;
 }
 
 .painel h2 {
@@ -116,6 +123,7 @@ header{
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-shadow: 3px 3px 2px (255, 255, 255, 0.8);
 }
 
 .painel a {
