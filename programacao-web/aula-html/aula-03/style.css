@@ -110,6 +110,14 @@ header{
     float:  linear-gradient(#DCDCF5, #F4BEBE);
 }
 
+.painel li:hover {
+    background-color: rgb(255,255,255,0.8);
+    box-shadow: 0 0 5px #333;
+    transition: box-shadow  0.3s;
+    transform: scale(1.1);
+    
+}
+
 .painel li {
     display: inline-block;
     vertical-align: top;
