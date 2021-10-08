@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="produto.css">
     <title>Document</title>
 </head>
 <body>
@@ -22,30 +23,31 @@
             </ul>
         </nav>
     </header>
-    <div class="produto">
-        <h1>Fuzzy Cardigan</h1>
-        <p>por apenas R$ 129,90</p>
-        <form>
-            <fieldset class="cores">
-                <legend>Escolha a cor:</legend>
-                <legend>Escolha a cor:</legend>
-                    <input type="radio" name="cor" id="verde" checked>
-                    <label for="verde">
-                        <img src="img/produtos/foto1-verde.png" alt="Produto na cor verde">
-                    </label>
-                    <input type="radio" name="cor" id="rosa">
-                    <label for="rosa">
-                        <img src="img/produtos/foto1-rosa.png" alt="Produto na cor rosa">
-                    </label>
-                    <input type="radio" name="cor" id="azul">
-                    <label for="azul">
-                        <img src="img/produtos/foto1-azul.png" alt="Produto na cor azul">
-                    </label>
-            </fieldset> <!-- .cores -->
-            <button class="comprar">Comprar</button>
-        </form>
-        
-    </div> <!-- .produto -->
+    <div class="container">
+        <div class="produto">
+            <h1>Fuzzy Cardigan</h1>
+            <p>por apenas R$ 129,90</p>
+            <form>
+                <fieldset class="cores">
+                    <legend>Escolha a cor:</legend>
+                        <input type="radio" name="cor" id="verde" checked>
+                        <label for="verde">
+                            <img src="img/produtos/foto1-verde.png" alt="Produto na cor verde">
+                        </label>
+                        <input type="radio" name="cor" id="rosa">
+                        <label for="rosa">
+                            <img src="img/produtos/foto1-rosa.png" alt="Produto na cor rosa">
+                        </label>
+                        <input type="radio" name="cor" id="azul">
+                        <label for="azul">
+                            <img src="img/produtos/foto1-azul.png" alt="Produto na cor azul">
+                        </label>
+                </fieldset> <!-- .cores -->
+                <button class="comprar">Comprar</button>
+            </form>
+        </div> <!-- .produto -->
+    </div> <!-- .container -->
+
     <footer>
         <div class="container">
             <img src="img/logo-rodape.png" alt="Logo da Mirror Fashion">
