@@ -54,6 +54,7 @@ label[for="azul"]::after {
 .cores label img {
   display: block;
   max-width: 100%;
+  border: 2px solid #CCC;
 }
 
 .produto {
@@ -107,6 +108,47 @@ label[for="azul"]::after {
   max-width: 36em;
 }
 
+table {
+  border-spacing: 0.2em;
+  border-collapse: separate;
+}
+
+thead {
+  background-color: #999;
+}
+
+thead th {
+  font-weight: bold;
+  padding: 0.3em 1em;
+  text-align: center;
+}
+
+td {
+  padding: 0.3em;
+}
+
+th:nth-child(2n) {
+  background-color: #CCC;
+}
+
+td:first-child {
+  font-style: italic;
+}
+
+.produto-back {
+  background-color: #F2F2F2;
+  margin-top: 1em;
+  border-top: 2px solid #CCC;
+}
+
+
+
+@media (min-width: 500px) {
+  .detalhes {
+    font-size: 1.2em;
+  }
+}
+
 @media (min-width: 630px) {
   .produto {
     position: relative;
@@ -127,6 +169,7 @@ label[for="azul"]::after {
     left: 0;
     max-width: 35%;
     max-height: 100%;
+    border: 2px solid #CCC;
   }
   .cores label:after {
     position: static;
