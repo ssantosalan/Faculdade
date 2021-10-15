@@ -91,6 +91,22 @@ label[for="azul"]::after {
   margin: 1em 0;
 }
 
+.detalhes {
+  padding: 2em 0;
+}
+
+.detalhes h2 {
+  font-size: 1.5em;
+  line-height: 2;
+}
+
+.detalhes p {
+  margin: 1em 0;
+  font-size: 1em;
+  line-height: 1.5;
+  max-width: 36em;
+}
+
 @media (min-width: 630px) {
   .produto {
     position: relative;
@@ -116,5 +132,13 @@ label[for="azul"]::after {
     position: static;
     float: left;
     margin-right: 10px;
+  }
+
+  fieldset {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em 0;
+    min-width: 240px;
+    width: 45%;
   }
 }
