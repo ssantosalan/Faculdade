@@ -93,9 +93,10 @@ label[for="azul"]::after {
 
 @media (min-width: 630px) {
   .produto {
-      position: relative;
+    position: relative;
     position: relative;
     padding-left: 40%;
+    font-size: 1.2em;
   }
   .cores {
     position: static;
