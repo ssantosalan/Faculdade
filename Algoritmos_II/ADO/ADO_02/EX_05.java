@@ -1,4 +1,9 @@
 /*
+Grupo: 
+	Alan Silva dos Santos
+	Guilherme Alves Martins
+	Jorge Luiz dos Santos Oliveira
+	
 Temos triângulos feito de blocos. A linha superior tem 1 bloco, a próxima linha abaixo tem 2 blocos, a
 próxima linha tem 3 blocos e assim por diante. Criar uma função recursiva que calcule (sem loops ou multiplicação)
 o número total de blocos em um triângulo com o número especificado de linhas.
