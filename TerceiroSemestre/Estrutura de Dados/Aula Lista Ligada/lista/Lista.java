@@ -71,7 +71,8 @@ public class Lista {
 				aux = auxRem;
 				auxRem.setProx(null);
 			} else {
-				
+				auxRem.setProx(x.getProx());
+				x.setProx(null);
 
 			}
 			return true;
