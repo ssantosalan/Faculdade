@@ -1,0 +1,52 @@
+{
+  "nome": "Alan",
+  "imagem": "url-imagem",
+  "email": "ss.alan@outlook.com",
+  "telefone": "(11) 94149-9875",
+  "dataNascimento": "1996-04-16",
+  "linkedin": "url-linkedin",
+  "github": "url-github",
+  "experienciasProfissionais": [
+      {
+          "empresa": "Nome empresa 1",
+          "cargo": "XXXXXX",
+          "dataInicio": "2000-01-20",
+          "dataTermino": "2001-02-15"
+      },
+      {
+          "empresa": "Nome empresa 2",
+          "cargo": "XXXXXX",
+          "dataInicio": "2000-01-20",
+          "dataTermino": "2001-02-15"
+      }
+  ],
+  "formacaoAcademica": [
+      {
+          "curso": "Análise e desenvolvimento de Sistemas",
+          "instituicao": "Centro Universitário Senac"
+      },
+      {
+          "curso": "XXXXX",
+          "instituicao": "XXXXX"
+      }
+  ],
+  "conhecimentos": [
+      "HTML/CSS/Javascript",
+      "Java",
+      "Spring boot"
+  ],
+  "idiomas": [
+      {
+          "idioma": "Inglês",
+          "leitura": "Excelente",
+          "escrita": "Bom",
+          "conversacao": "Bom"
+      },
+      {
+          "idioma": "Espanhol",
+          "leitura": "Bom",
+          "escrita": "Ruim",
+          "conversacao": "Euim"
+      }
+  ]
+}
