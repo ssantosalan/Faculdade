@@ -11,8 +11,9 @@ public class Context {
 		return estado;
 	}
 
-	public void setEstado(State estado) {
+	protected void setEstado(State estado) {
 		this.estado = estado;
+		System.out.println(getEstado());
 	}
 
 	public void requisitarAtrasada() {
