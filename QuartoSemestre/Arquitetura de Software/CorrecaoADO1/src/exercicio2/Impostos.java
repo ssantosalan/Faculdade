@@ -9,7 +9,7 @@ public enum Impostos implements Strategy {
 
 		@Override
 		public double calcular(Orcamento orcamento) {
-			// TODO Auto-generated method stub
+//			return orcamento.calcularTotal() * 10;
 			return 0;
 		}
 
@@ -19,11 +19,23 @@ public enum Impostos implements Strategy {
 		public Strategy instance() {
 			return new Ip2();
 		}
+
+		@Override
+		public double calcular(Orcamento orcamento) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
 	},
 	IP3 {
 		@Override
 		public Strategy instance() {
 			return new Ip3();
+		}
+
+		@Override
+		public double calcular(Orcamento orcamento) {
+			// TODO Auto-generated method stub
+			return 0;
 		}
 
 	};
