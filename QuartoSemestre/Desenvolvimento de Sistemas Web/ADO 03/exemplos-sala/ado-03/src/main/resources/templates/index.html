@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página pessoal</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+
+    <article>
+      <div id="linha-principal">
+        <div id="col-esq">
+          <section id="dados-contato">
+            <img id="imgPerfil" src="img/fotoPerfil.png" alt="foto de perfil">
+			<p>Nome: <span th:text="${dadosPessoais.nome}"></span></p>
+	        <p>E-mail: <span th:text="${dadosPessoais.email}"></span></p>
+	        <p>Data nascimento: <span th:text="${dadosPessoais.dataNascimento}"></span></p>
+	      	<p>LinkedIn: <a id="linkedin" th:href="${dadosPessoais.linkedIn}" target="_blank" th:text="${dadosPessoais.linkedIn}"></a></p>
+	        <p>Github: <a id="github" th:href="${dadosPessoais.github}" target="_blank" th:text="${dadosPessoais.github}"></a></p>
+   
+          </section>
+          <section id="conhecimentos" class="secao-dados">
+            <h2>Conhecimentos</h2>
+	        
+          </section>
+        </div>
+        <div id="col-dir">
+          
+          <section id="exp-prof" class="secao-dados">
+            <h2>Experiências profissionais</h2>
+
+          </section>
+
+          <section id="form-acad" class="secao-dados">
+            <h2>Formação acadêmica</h2>
+
+          </section>
+        </div>
+      </div>
+      <section id="idiomas" class="secao-dados">
+        <h2>Idiomas</h2>
+        
+
+      </section>
+
+    </article>
+  <!--  <script src="script.js"></script> -->
+  </body>
+</html>
