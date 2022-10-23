@@ -1,0 +1,76 @@
+public class Assinantes implements Observer {
+        private String nome;
+        public Assinantes() {
+        }
+        public Assinantes(String nome, Subject subject) {
+                this.nome = nome;
+                subject.addObserver(this);
+        }
+        @Override
+        public void update(Vagas acoes) {
+                System.out.println(nome + " " + acoes);
+        }
+}
+
+----------------
+
+import java.util.LinkedList; import java.util.List; public class Agencia implements Subject{
+        private List<Observer> observadores=new LinkedList<>();
+        private List<Vagas> listaAcoes=new LinkedList<>();
+        private int index=-1;
+        @Override
+        public void addObserver(Observer observer) {
+                observadores.add(observer);
+        }
+ 
+        @Override
+        public void addAcoes(Vagas acoes) {
+                listaAcoes.add(acoes);
+                index++;
+                notificar();
+        }
+        @Override
+        public void notificar() {
+              for(Observer observer:observadores){
+                  observer.update(listaAcoes.get(index));
+              }
+        }
+}
+
+--------------
+
+public class ExemploObserver {
+        public static void main(String[] args) {
+                Subject agencia=new Agencia();
+                Observer assinante1=new Assinantes("Lucas", agencia);
+                agencia.addAcoes(Vagas.DESENVOLVEDOR);
+                agencia.addAcoes(Vagas.QA);
+                agencia.addAcoes(Vagas.LIXEIRO);
+                Observer assinante2=new Assinantes("Matheus", agencia);
+                agencia.addAcoes(Vagas.PROFESSOR);
+        }
+}
+
+------------
+
+public interface Observer {
+        public void update(Vagas acoes);
+    }
+
+------------
+
+public interface Subject {
+        public void addObserver(Observer observer);
+        public void addAcoes(Vagas acoes);
+        public void notificar();
+}
+
+----------
+
+public enum Vagas {
+        DESENVOLVEDOR, QA, LIXEIRO, PROFESSOR;
+}
+
+
+
+

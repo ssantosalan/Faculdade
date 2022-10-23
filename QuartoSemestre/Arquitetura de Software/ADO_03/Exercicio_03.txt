@@ -1,0 +1,133 @@
+package exercicio_03;
+
+public class JogoNaves extends Thread {
+	public static void main(String[] args) {
+		JogoNaves jogador = new JogoNaves();
+		JogoNaves jogador2 = new JogoNaves();
+		jogador.start();
+		jogador2.start();
+	}
+
+	@Override
+	public void run() {
+		InterfaceNaveJogador naveJogador = NaveJogador.getInstance();
+		InterfaceNaveJogador naveJogador2 = NaveJogador.getInstance();
+		System.out.println(naveJogador);
+		System.out.println(naveJogador2);
+		InterfaceNaveInimiga naveInimiga = new NaveInimiga("Inimigo 1", naveJogador);
+		naveJogador.movimentoAleatorio();
+		naveJogador.movimentoAleatorio();
+		naveJogador.movimentoAleatorio();
+		naveJogador.movimentoAleatorio();
+	}
+}
+
+----------
+
+package exercicio_03;
+
+public class NaveInimiga implements InterfaceNaveInimiga {
+
+	private String nome;
+
+	public NaveInimiga(String nome, InterfaceNaveJogador navj) {
+		this.nome = nome;
+		navj.adicionarObservador(this);
+
+	}
+
+	@Override
+	public void update(Acoes acao) {
+		System.out.println(nome + " - Ação: " + acao);
+	}
+}
+
+---------------
+
+package exercicio_03;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class NaveJogador implements InterfaceNaveJogador {
+	private String nome;
+	private List<InterfaceNaveInimiga> listaNaveInimiga = new ArrayList<>();
+	private List<Acoes> listaAcoes = new ArrayList<>();
+	private static int indice = -1;
+	private static NaveJogador singleton;
+
+	public NaveJogador() {
+	}
+
+	private NaveJogador(String nome) {
+		this.nome = nome;
+		listaNaveInimiga = new ArrayList<>();
+		listaAcoes = new ArrayList<>();
+	}
+
+	public synchronized static NaveJogador getInstance() {
+		if (singleton == null) {
+			singleton = new NaveJogador();
+		}
+		return singleton;
+	}
+
+	@Override
+	public void adicionarObservador(InterfaceNaveInimiga navi) {
+		listaNaveInimiga.add(navi);
+	}
+
+	@Override
+	public void adionarAcoes(Acoes acao) {
+		listaAcoes.add(acao);
+		indice++;
+		notificar();
+	}
+
+	@Override
+	public void notificar() {
+		for (InterfaceNaveInimiga navi : listaNaveInimiga) {
+			navi.update(listaAcoes.get(indice));
+		}
+	}
+
+	@Override
+	public void movimentoAleatorio() {
+		Random r = new Random();
+		int n = r.nextInt(4);
+		adionarAcoes(Acoes.values()[n]);
+	}
+}
+
+----------
+
+package exercicio_03;
+
+public enum Acoes {
+	RECUAR, VIRAR_ESQUERDA, VIRAR_DIREITA, AVANCAR;
+}
+
+---------
+
+package exercicio_03;
+
+public interface InterfaceNaveInimiga {
+	public void update(Acoes acao);
+}
+
+----------
+
+package exercicio_03;
+
+public interface InterfaceNaveJogador {
+
+	public void adicionarObservador(InterfaceNaveInimiga navi);
+
+	public void adionarAcoes(Acoes acao);
+
+	public void notificar();
+
+	public void movimentoAleatorio();
+}
+

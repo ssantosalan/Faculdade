@@ -1,0 +1,217 @@
+package exercicio_02;
+
+public interface State {
+	public void pedidoEmSeparacao();
+
+	public void pedidoEnviadoParaTransportadora();
+
+	public void pedidoEmRotaDeEntrega();
+
+	public void pedidoEntregue();
+}
+
+-------------
+
+package exercicio_02;
+
+public class Context {
+	private State state = new PedidoEmSeparacao(this);
+
+	public State getState() {
+		return state;
+	}
+
+	void setState(State state) {
+		this.state = state;
+		System.out.println(getState());
+	}
+
+	public void solicitarPedidoEmSeparação() {
+		state.pedidoEmSeparacao();
+	}
+
+	public void solicitarPedidoEnviadoParaTransportadora() {
+		state.pedidoEnviadoParaTransportadora();
+	}
+
+	public void solicitarPedidoEmRotaDeEntrega() {
+		state.pedidoEmRotaDeEntrega();
+	}
+
+	public void solicitarPedidoEntregue() {
+		state.pedidoEntregue();
+	}
+}
+
+------------------
+
+package exercicio_02;
+
+public class PedidoEmRotaDeEntrega implements State {
+	private final String nome = "Pedido em rota de entrega";
+	private Context tarefa;
+
+	public PedidoEmRotaDeEntrega(Context tarefa) {
+		this.tarefa = tarefa;
+	}
+
+	@Override
+	public void pedidoEmSeparacao() {
+		System.out.println("Pedido em rota de entrega");
+	}
+
+	@Override
+	public void pedidoEnviadoParaTransportadora() {
+		System.out.println("Pedido em rota de entrega");
+	}
+
+	@Override
+	public void pedidoEmRotaDeEntrega() {
+		System.out.println("Pedido em rota de entrega");
+	}
+
+	@Override
+	public void pedidoEntregue() {
+		tarefa.setState(new PedidoEntregue(tarefa));
+	}
+
+	@Override
+	public String toString() {
+		return "Novo estado da tarefa: " + nome;
+	}
+}
+
+----------------------------
+
+package exercicio_02;
+
+public class PedidoEmSeparacao implements State {
+	private final String nome = "Pedido Em Separacao";
+	private Context tarefa;
+
+	public PedidoEmSeparacao(Context tarefa) {
+		this.tarefa = tarefa;
+	}
+
+	@Override
+	public void pedidoEmSeparacao() {
+		System.out.println("Pedido já está em separação");
+	}
+
+	@Override
+	public void pedidoEnviadoParaTransportadora() {
+		tarefa.setState(new PedidoEnviadoParaTransportadora(tarefa));
+	}
+
+	@Override
+	public void pedidoEmRotaDeEntrega() {
+		System.out.println("Pedido já está em separação");
+	}
+
+	@Override
+	public void pedidoEntregue() {
+		System.out.println("Pedido já está em separação");
+	}
+
+	@Override
+	public String toString() {
+		return "Novo estado da tarefa: " + nome;
+	}
+}
+
+--------------------
+
+package exercicio_02;
+
+public class PedidoEntregue implements State {
+	private final String nome = "Pedido entregue";
+	private Context tarefa;
+
+	public PedidoEntregue(Context tarefa) {
+		this.tarefa = tarefa;
+	}
+
+	@Override
+	public void pedidoEmSeparacao() {
+		tarefa.setState(new PedidoEntregue(tarefa));
+	}
+
+	@Override
+	public void pedidoEnviadoParaTransportadora() {
+		tarefa.setState(new PedidoEntregue(tarefa));
+	}
+
+	@Override
+	public void pedidoEmRotaDeEntrega() {
+		tarefa.setState(new PedidoEntregue(tarefa));
+	}
+
+	@Override
+	public void pedidoEntregue() {
+		System.out.println("Pedido entregue");
+	}
+
+	@Override
+	public String toString() {
+		return "Novo estado da tarefa: " + nome;
+	}
+}
+
+--------------------------
+
+package exercicio_02;
+
+public class PedidoEnviadoParaTransportadora implements State {
+	private final String nome = "Pedido enviado para a transportadora";
+	private Context tarefa;
+
+	public PedidoEnviadoParaTransportadora(Context tarefa) {
+		this.tarefa = tarefa;
+	}
+
+	@Override
+	public void pedidoEmSeparacao() {
+		System.out.println("Pedido enviado para a transportadorao");
+	}
+
+	@Override
+	public void pedidoEmRotaDeEntrega() {
+		tarefa.setState(new PedidoEmRotaDeEntrega(tarefa));
+	}
+
+	@Override
+	public void pedidoEntregue() {
+		System.out.println("Pedido enviado para a transportadora");
+	}
+
+	@Override
+	public String toString() {
+		return "Novo estado da tarefa: " + nome;
+	}
+
+	@Override
+	public void pedidoEnviadoParaTransportadora() {
+		System.out.println("Pedido enviado para a transportadora");
+	}
+}
+
+---------------------------
+
+package exercicio_02;
+
+import java.text.ParseException;
+
+public class GerenciadorTarefas {
+	public static void main(String[] args) throws ParseException {
+		Context tarefa = new Context();
+		tarefa.solicitarPedidoEmSeparação();
+		tarefa.solicitarPedidoEnviadoParaTransportadora();
+		tarefa.solicitarPedidoEmRotaDeEntrega();
+		tarefa.solicitarPedidoEntregue();
+	}
+}
+
+
+
+
+
